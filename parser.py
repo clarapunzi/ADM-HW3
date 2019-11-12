@@ -7,7 +7,7 @@ head_wiki = ['Directed by', 'Produced by', 'Written by', 'Starring', 'Music by',
 head = ['title', 'intro', 'plot', 'film_name', 'director', 'producer', 'writer', 'starring', 'music', 'release date', 'runtime', 'country', 'language', 'budget']
 infos = ['NA']*14
 
-NOTlinks = {}
+NOTlinks = {}  # Create a dictionary to get the links of the of the 'disambiguation' pages
 for i in range(10000):
     if i == 9429 or i == 9671:  # These pages do not exist
         continue
