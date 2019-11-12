@@ -1,5 +1,3 @@
-import csv
-import json
 import pandas as pd
 from bs4 import BeautifulSoup
 
@@ -14,7 +12,7 @@ for i in range(10000):
     if i == 9429 or i == 9671:  # These pages do not exist
         continue
     try:
-        page = open('C:/Users/Clara/Desktop/sapienza/ADM/HM3/webpages/articles/article_%d.html' %i).read()
+        page = open('article_%d.html' %i).read()
         soup = BeautifulSoup(page, 'html.parser')
         infos = parse_page(soup)
     
@@ -23,6 +21,6 @@ for i in range(10000):
             tsv_writer.writerow(head)
             tsv_writer.writerow(infos)
     except:
-        page = open('C:/Users/Clara/Desktop/sapienza/ADM/HM3/webpages/articles/article_%d.html' %i).read()
+        page = open('article_%d.html' %i).read()
         soup = BeautifulSoup(page, 'html.parser')
         NOTlinks[i] = soup.title.text[:-12]
