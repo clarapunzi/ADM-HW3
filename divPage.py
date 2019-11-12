@@ -19,11 +19,10 @@ def parse(bf):
     if len(bf.find_all('p')) > 1:
         info[2] = bf.find_all('p')[1].text
     info[3] = infobox[0].text
-    # complete the list 'infos' with the available information
     for j in range(len(infoVar)):
         for i in range(2, len(infobox)):
                 if infobox[i].th is not None and infoVar[j] == infobox[i].th.text:
-                    info[j + 4] = infobox[i].td.text  # names in infoVar correspond to those in start[4:]
+                    info[j + 4] = infobox[i].td.text
                 break
         return info
 
