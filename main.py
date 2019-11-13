@@ -4,7 +4,7 @@ import json
 urls = json.load(open('urls.json'))
 voc = json.load(open('vocabulary.json'))
 inverted_index = json.load(open('inverted_index.json'))
-
+inverted_index_freq = json.load(open('inverted_index_freq.json'))
 
 # Ask the user to input a query
 query = input().split()  
