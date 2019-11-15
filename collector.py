@@ -4,6 +4,7 @@ import json
 import csv
 import time     #For Delay
 import urllib.request    #Extracting web pages
+from collector_utils import download_page
 
 class MyHTMLParser(HTMLParser):
     def handle_starttag(self, tag, attrs):
