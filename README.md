@@ -73,7 +73,7 @@ In particular in this file there are:
 * _make_clickable_: allows a link to became clickable.
 * _year_docs_: is the first function we used to solve the third point of the homework; it extracts the year of release of a movie from the *.tsv* files.
 * _sim_docs_: is a function that takes in input a dictonary and returns a new dictionary with the same keys but the similiarity based on the year of release as values.     
-* _actors_dic_: creates a dictonary in which each actor is associated to the movies in which he played.
+* _actor_dic_: creates a dictonary in which each actor is associated to the movies in which he played; this, together with few more functions, is used in the *main* to solve the bonus part of the homework.
 
 9. #### excercise_4.py ####
 In this file there is the function that permit to solve the excercise and to find the subsequence of a word.
