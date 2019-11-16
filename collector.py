@@ -1,7 +1,6 @@
 from html.parser import HTMLParser
 import pandas as pd
 import json 
-import csv
 import time     #For Delay
 import urllib.request    #Extracting web pages
 from collector_utils import download_page
@@ -19,17 +18,15 @@ parser.feed(page)
 
     
 # Download the webpages
-    
-for i in index:
+for i in range(10000):     # range(10000,20000); range(20000,30000)
     try:
         download_page(parser.urls[i])
         time.sleep(1)
     except:
-        time.sleep(1200)
+        time.sleep(1200)    # this exception happens when we reach the limit of requests of Wikipedia
 
         
 # Save an indexed list of the urls in a json file
-
 d = {}
 for n, url in enumerate(parser.urls):
     d[n]=url
