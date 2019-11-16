@@ -46,8 +46,6 @@ for term_id in inverted_index_freq.keys():
         else:
             inverted_index_freq[term_id] += [(document_id, tfidf(term_id, document_id))]
 
-# The new inverted_index_freq is as follow: {term_id : [document_id, TF-IDF_{document_id, term}]] 
-        
 with open('inverted_index_freq.json', 'w') as fp:
     json.dump(inverted_index_freq, fp)        
         
