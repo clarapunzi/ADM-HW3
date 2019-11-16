@@ -49,7 +49,7 @@ There are the global variables that we use to devide and take the information.
 In this way we can open the HTML pages, parse the file with the global variable and at the end return in output a .tsv file.
 
 5. #### parser_utils.py #### 
-In this file there is the main parser function, that is, _parse_page_. With this function it is possible to find all the <table> and <p> tags that there are in an HTML file and after that it is possible to organise and store the information about the movie using the global variables.
+In this file there is the main parser function, that is, _parse_page_. With this function it is possible to find all the *table* and *p* tags that there are in an HTML file and after that it is possible to organise and store the information about the movie using the global variables.
 
 6. #### index.py ####
 In this file you can find the code to generate the indexes for the first two types of research.
@@ -69,8 +69,8 @@ Also that there are the functions _add_node_, _add_edges_ and _drow_graph_ that 
 In particular in this file there are:
 * _query_vector_: creates the vector of a query;
 * _vector_: creates the vectors of a given file;
-* _cosine_similarity_: return the cosine similarity between two vectors; specifically, it is given by the cosine angle between them.
-* _make_clickable_: that permit a value to became clickable.
+* _cosine_similarity_: returns the cosine similarity between two vectors; specifically, it is given by the cosine angle between them.
+* _make_clickable_: allows a link to became clickable.
 * _year_docs_: is the first function we used to solve the third point of the homework; it extracts the year of release of a movie from the *.tsv* files.
 * _sim_docs_: is a function that takes in input a dictonary and returns a new dictionary with the same keys but the similiarity based on the year of release as values.     
 * _actors_dic_: creates a dictonary in which each actor is associated to the movies in which he played.
