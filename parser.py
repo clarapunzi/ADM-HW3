@@ -8,10 +8,12 @@ head_wiki = ['Directed by', 'Produced by', 'Written by', 'Starring', 'Music by',
 head = ['title', 'intro', 'plot', 'film_name', 'director', 'producer', 'writer', 'starring', 'music', 'release date', 'runtime', 'country', 'language', 'budget']
 infos = ['NA']*14
 
-NOTlinks = {}  # Create a dictionary to get the links of the of the 'disambiguation' pages
+''' # In this step I have also created a dictionary to get the links of the 'disambiguation' pages (around 100). 
+After that, I modified the urls of these pages and correct them with new ones.
+'''
+NOTlinks = {}  
+
 for i in range(10000):
-    if i == 9429 or i == 9671:  # These pages do not exist
-        continue
     try:
         page = open('article_%d.html' %i).read()
         soup = BeautifulSoup(page, 'html.parser')
