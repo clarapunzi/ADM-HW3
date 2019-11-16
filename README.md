@@ -57,27 +57,23 @@ Also we create a vocabolary that associates each possible word in our documents 
 
 7. #### index_utils.py ####
 In this file there are four functions:
-* _data_freq_
-  - this function evaluate the frequency of a word in a specific file;
-* _idf_
-  - With this function we calculate the inverse data frequency of a word with respect to the whole set of documents;
-* _tfidf_
-  - With this function we calculate the term frequency - inverse data frequency of a word in a given document. It is calculated by multiplying the results of the previous two functions;
-* _get_key_
-  - This function return the term that is linked to the term_id that the user insert in input.
+* _data_freq_: this function evaluate the frequency of a word in a specific file;
+* _idf_: with this function we calculate the inverse data frequency of a word with respect to the whole set of documents;
+* _tfidf_: with this function we calculate the term frequency - inverse data frequency of a word in a given document. It is calculated by multiplying the results of the previous two functions;
+* _get_key_: this function return the term that is linked to the term_id that the user insert in input.
 
 8. #### utils.py ####
 
 In this file there are all the functions that we use for different file.
 Also that there are the functions _add_node_, _add_edges_ and _drow_graph_ that you can use for the bonus Step.
 In particular in this file there are:
-* _query_vector_ creates the vector of a query;
-* _vector_ that create the vectors of a given file;
-* _cosine_similarity_  return the cosine similarity between two vectors; specifically, it is given by the cosine angle between them.
-* _make_clickable_ that permit a value to became clickable.
-* _year_docs_ is the first function we used to solve the third point of the homework; it extracts the year of release of a movie from the *.tsv* files.
-* _sim_docs_ is a function that takes in input a dictonary and returns a new dictionary with the same keys but the similiarity based on the year of release as values.     
-* _actors_dic_  creates a dictonary in which each actor is associated to the movies in which he played.
+* _query_vector_: creates the vector of a query;
+* _vector_: creates the vectors of a given file;
+* _cosine_similarity_: return the cosine similarity between two vectors; specifically, it is given by the cosine angle between them.
+* _make_clickable_: that permit a value to became clickable.
+* _year_docs_: is the first function we used to solve the third point of the homework; it extracts the year of release of a movie from the *.tsv* files.
+* _sim_docs_: is a function that takes in input a dictonary and returns a new dictionary with the same keys but the similiarity based on the year of release as values.     
+* _actors_dic_: creates a dictonary in which each actor is associated to the movies in which he played.
 
 9. #### excercise_4.py ####
 In this file there is the function that permit to solve the excercise and to find the subsequence of a word.
