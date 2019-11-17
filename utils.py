@@ -130,7 +130,7 @@ def draw_graph(G):
     d = dict(G.degree)
     elarge = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] > 4]
     esmall = [(u, v) for (u, v, d) in G.edges(data=True) if d['weight'] <= 4]
-    nc = nx.draw_networkx_nodes(G, pos, node_size= [v * 100 for v in d.values()], node_color=n_color, cmap=plt.cm.jet, with_labels = False)
+    nc = nx.draw_networkx_nodes(G, pos, node_size= [v * 100 for v in d.values()], node_color=n_color, cmap=plt.cm.jet, with_labels = True)
     nx.draw_networkx_edges(G, pos, edgelist=elarge, edge_color='r', width = 5)
     nx.draw_networkx_edges(G, pos, edgelist=esmall, edge_color='g', style='dashed')
     plt.colorbar(nc).set_label('Number of movies in which the actor played')
