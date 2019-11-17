@@ -15,7 +15,7 @@ def search_engine_1(query_match):
     df = pd.DataFrame(columns=['Title','Intro','Wikipedia Url'])
     for i in query_match:
         file = open('webpages/tsv/output_%d.tsv' %i).read().split('\n\n')[1].split('\t')
-        title, intro, link = file[3].encode('utf8').decode("unicode_escape"), file[1].encode('utf8').decode("unicode_escape"), urls[str(i)]
+        title, intro, link = file[3].encode('utf8').decode("unicode_escape"), file[1].encode('utf8').decode("unicode_escape"), urls[str(i+1)]
         new_row = {'Title':title, 'Intro': intro, 'Wikipedia Url': link}
         df = df.append(new_row, ignore_index=True)
     
@@ -40,7 +40,7 @@ def search_engine_2(query, query_match):
     for sim in heapq.nlargest(5, sim_dict.items(), key = lambda i: i[1]):
         i = sim[0]  # document_id
         file = open('webpages/tsv/output_%d.tsv' %i).read().split('\n\n')[1].split('\t')
-        title, intro, link = file[3].encode('utf8').decode("unicode_escape"), file[1].encode('utf8').decode("unicode_escape"), urls[str(i)]
+        title, intro, link = file[3].encode('utf8').decode("unicode_escape"), file[1].encode('utf8').decode("unicode_escape"), urls[str(i+1)]
         new_row = {'Title':title, 'Intro': intro, 'Wikipedia Url': link, 'Similarity': sim[1]}
         df = df.append(new_row, ignore_index=True)
 
@@ -67,7 +67,7 @@ def search_engine_3(query_match):
     for sim in heapq.nlargest(5, sim_years.items(), key = lambda i: i[1]):
         i = sim[0]  # document_id
         file = open('webpages/tsv/output_%d.tsv' %i).read().split('\n\n')[1].split('\t')
-        title, intro, link = file[3].encode('utf8').decode("unicode_escape"), file[1].encode('utf8').decode("unicode_escape"), urls[str(i)]
+        title, intro, link = file[3].encode('utf8').decode("unicode_escape"), file[1].encode('utf8').decode("unicode_escape"), urls[str(i+1)]
         new_row = {'Title':title, 'Intro': intro, 'Wikipedia Url': link, 'Similarity': sim[1]}
         df = df.append(new_row, ignore_index=True)
 
