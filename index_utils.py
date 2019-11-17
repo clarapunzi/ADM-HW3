@@ -1,3 +1,9 @@
+import json
+voc = json.load(open('vocabulary.json'))
+inverted_index = json.load(open('inverted_index.json'))
+import math
+N = 30000
+
 # Function that returns the data frequency (integer) of a term (string) in a specified document (i)
 
 def data_freq(term, i):
